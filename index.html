@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Mastermind</title>
+    <!-- <script src="print.js"></script> -->
+</head>
+
+<body>
+    <div id="contextMenu" class="context-menu" style="display:none"> 
+		<ul> 
+			<li style="background-color: red;" class="menuItem" id="red"></li>
+            <li style="background-color: green;" class="menuItem" id="green"></li>
+            <li style="background-color: blue;" class="menuItem" id="blue"></li>
+            <li style="background-color: orange;" class="menuItem" id="orange"></li>
+            <li style="background-color: yellow;" class="menuItem" id="yellow"></li>
+            <li style="background-color: brown;" class="menuItem" id="red"></li>
+		</ul> 
+	</div>
+    <div id="board">
+        <h1>Mastermind</h1>
+        <div class="qpaper">
+            <div class="marks m5">
+                <div class="markCircle dot" id="m50"></div>
+                <div class="markCircle dot" id="m51"></div>
+                <div style='clear:both'></div>
+                <div class="markCircle dot" id="m52"></div>
+                <div class="markCircle dot" id="m53"></div>
+            </div>
+            <div class="attempt a5">
+                <b>6</b>
+                <span class="dot attemtCircle" id="a50"></span>
+                <span class="dot attemtCircle" id="a51"></span>
+                <span class="dot attemtCircle" id="a52"></span>
+                <span class="dot attemtCircle" id="a53"></span>
+                <button class="btn btn-primary btn-sm check" id="c5">check</button>
+            </div>
+        </div>
+        <div class="qpaper">
+            <div class="marks m4">
+                <div class="markCircle dot" id="m40"></div>
+                <div class="markCircle dot" id="m41"></div>
+                <div style='clear:both'></div>
+                <div class="markCircle dot" id="m42"></div>
+                <div class="markCircle dot" id="m43"></div>
+            </div>
+            <div class="attempt a4">
+                <b>5</b>
+                <span class="dot attemtCircle" id="a40"></span>
+                <span class="dot attemtCircle" id="a41"></span>
+                <span class="dot attemtCircle" id="a42"></span>
+                <span class="dot attemtCircle" id="a43"></span>
+                <button class="btn btn-primary btn-sm check" id="c4">check</button>
+            </div>
+        </div>
+        <div class="qpaper">
+            <div class="marks m3">
+                <div class="markCircle dot" id="m30"></div>
+                <div class="markCircle dot" id="m31"></div>
+                <div style='clear:both'></div>
+                <div class="markCircle dot" id="m32"></div>
+                <div class="markCircle dot" id="m33"></div>
+            </div>
+            <div class="attempt a3">
+                <b>4</b>
+                <span class="dot attemtCircle" id="a30"></span>
+                <span class="dot attemtCircle" id="a31"></span>
+                <span class="dot attemtCircle" id="a32"></span>
+                <span class="dot attemtCircle" id="a33"></span>
+                <button class="btn btn-primary btn-sm check" id="c3">check</button>
+            </div>
+        </div>
+        <div class="qpaper">
+            <div class="marks m2">
+                <div class="markCircle dot" id="m20"></div>
+                <div class="markCircle dot" id="m21"></div>
+                <div style='clear:both'></div>
+                <div class="markCircle dot" id="m22"></div>
+                <div class="markCircle dot" id="m23"></div>
+            </div>
+            <div class="attempt a2">
+                <b>3</b>
+                <span class="dot attemtCircle" id="a20"></span>
+                <span class="dot attemtCircle" id="a21"></span>
+                <span class="dot attemtCircle" id="a22"></span>
+                <span class="dot attemtCircle" id="a23"></span>
+                <button class="btn btn-primary btn-sm check" id="c2">check</button>
+            </div>
+        </div>
+        <div class="qpaper">
+            <div class="marks m1">
+                <div class="markCircle dot" id="m10"></div>
+                <div class="markCircle dot" id="m11"></div>
+                <div style='clear:both'></div>
+                <div class="markCircle dot" id="m12"></div>
+                <div class="markCircle dot" id="m13"></div>
+            </div>
+            <div class="attempt a1">
+                <b>2</b>
+                <span class="dot attemtCircle" id="a10"></span>
+                <span class="dot attemtCircle" id="a11"></span>
+                <span class="dot attemtCircle" id="a12"></span>
+                <span class="dot attemtCircle" id="a13"></span>
+                <button class="btn btn-primary btn-sm check" id="c1">check</button>
+            </div>
+        </div>
+        <div class="qpaper">
+            <div class="marks m0">
+                <div class="markCircle dot" id="m00"></div>
+                <div class="markCircle dot" id="m01"></div>
+                <div style='clear:both'></div>
+                <div class="markCircle dot" id="m02"></div>
+                <div class="markCircle dot" id="m03"></div>
+            </div>
+            <div class="attempt a0">
+                <b>1</b>
+                <span class="dot attemtCircle" id="a00"></span>
+                <span class="dot attemtCircle" id="a01"></span>
+                <span class="dot attemtCircle" id="a02"></span>
+                <span class="dot attemtCircle" id="a03"></span>
+                <button class="btn btn-primary btn-sm check" id="c0">check</button>
+            </div>
+        </div>
+        <br>
+        <a href="rules.html" style="color: black;">How to play</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="checker.js"></script>
+</body>
+
+</html>

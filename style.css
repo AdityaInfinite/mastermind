@@ -1,0 +1,60 @@
+#board{
+    background-color: #3AB2F6;
+    height: 600px;
+    width: 300px;
+    margin: auto;
+    padding: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+body{
+    padding: 10px 0px;;
+    margin: 0%;
+}
+.dot{
+    height: 25px;
+    width: 25px;
+    background-color: #3AB2F6;
+    border-radius: 50%;
+    display: inline-block;
+    border:1px solid black; 
+}
+.markCircle{
+    margin:4px; 
+    border:1px solid black; 
+    float: left
+}
+.qpaper {
+    border: 1px solid black;
+}
+div div.qpaper{
+    padding: 5px 0px;
+}
+
+.context-menu { 
+    position: absolute; 
+    text-align: center; 
+    /* background: lightgray;  */
+    border: 1px solid black; 
+} 
+
+.context-menu ul { 
+    padding: 0px; 
+    margin: 0px; 
+    list-style: none; 
+} 
+
+.context-menu ul li { 
+    width: 25px;
+    height: 25px;
+    border: 1px solid black; 
+} 
+
+.context-menu ul li a { 
+    text-decoration: none; 
+    color: black; 
+} 
+
+.context-menu ul li:hover { 
+    border: 1px solid white;
+} 
